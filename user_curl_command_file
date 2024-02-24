@@ -1,0 +1,28 @@
+curl --location --request POST 'localhost:8090/api/auth/signup' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=BE874A9F76E0C29C9437AB5D3E3030AF' \
+--data-raw '{
+    "email":"Test@Test.com",
+    "password":"M@123"
+}'
+
+
+curl --location --request POST 'localhost:8090/api/auth/signin' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=BE874A9F76E0C29C9437AB5D3E3030AF' \
+--data-raw '{
+    "email":"Test@Test.com",
+    "password":"M@123"
+}'
+
+curl --location --request GET 'localhost:8090/api/test/user' \
+--header 'Authorization: Bearer ADD_TOKEN' \
+--header 'Cookie: JSESSIONID=BE874A9F76E0C29C9437AB5D3E3030AF'
+
+curl --location --request POST 'localhost:8090/api/auth/refreshtoken' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=BE874A9F76E0C29C9437AB5D3E3030AF' \
+--data-raw '{
+    "refreshToken":"ADD_REFERENCE_TOKEN"
+    
+}'
