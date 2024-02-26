@@ -6,6 +6,7 @@ Run jar : java -jar user-0.0.1-SNAPSHOT.jar
 prerequest
 ----------
 Mysql need to be installed
+
 Need to set mysql properties in application.property file (like db port, username, password) 
 
 CURL Command
